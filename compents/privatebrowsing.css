@@ -1,0 +1,21 @@
+
+/* Private browsing stuff*/
+#private-browsing-indicator-with-label{
+    padding-right: 100px;
+  }
+  
+  [privatebrowsingmode="temporary"]{
+    #nav-bar,
+    #navigator-toolbox,
+    #sidebar-box,
+    #tabbrowser-tabbox,
+    #tabbrowser-tabpanels,
+    #browser,
+    #appcontent,
+    #sidebar-select-box,
+    .browser-sidebar2,
+    tab.tabbrowser-tab *{
+      background-color: var(--private-browsing-color)!important;
+    }  
+  }
+  

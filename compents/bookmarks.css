@@ -1,0 +1,91 @@
+
+/* Variables for toolbar & bookmark attributes */
+:root {
+    --uc-bm-height: 24px; 
+    --uc-bm-padding: 6px; 
+}
+
+/* Style for Personal Toolbar */
+#PersonalToolbar {
+    position: relative !important;
+    padding: 1px 6px !important;
+}
+
+/* Additional padding for touch density */
+:root[uidensity="touch"] #PersonalToolbar {
+    --uc-bm-padding: 6px;
+}
+
+/* Transform and delay transition of Personal Toolbar */
+#PersonalToolbar:not([customizing]) {
+    margin-bottom: calc(2px - var(--uc-bm-height) - 2 * var(--uc-bm-padding)) !important;
+    transform: rotateX(90deg) !important;
+    transform-origin: top !important;
+    transition: transform 0.1s ease-in-out 0.6s !important;
+    z-index: 2 !important;
+}
+
+/* Bookmark item padding and icon transition */
+#PlacesToolbarItems > .bookmark-item {
+    padding-block: var(--uc-bm-padding) !important;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+}
+#PlacesToolbarItems > .bookmark-item .toolbarbutton-icon {
+    transition: opacity 0.1s ease-in-out 0.4s !important;
+    opacity: 0 !important;
+}
+
+/* Hover effect for toolbar and bookmark icon/text */
+#navigator-toolbox:hover > #PersonalToolbar,
+#navigator-toolbox:hover #PlacesToolbarItems > .bookmark-item .toolbarbutton-icon,
+#navigator-toolbox:hover #PlacesToolbarItems > .bookmark-item .toolbarbutton-text {
+    transition-delay: 100ms !important;
+    transform: rotateX(0) !important;
+    opacity: 1 !important;
+}
+
+/* Bookmark item text transition */
+#PlacesToolbarItems > .bookmark-item .toolbarbutton-text {
+    transition: opacity 0.1s ease-in-out 0.4s !important;
+    opacity: 0 !important;
+}
+
+/* Fix the white line above the bookmarks bar when it's empty */
+#personal-toolbar-empty {
+  padding: 2px !important;
+}
+
+/*------------------------------------------------*/
+/* Make it good in transparent bg */
+
+@media (prefers-color-scheme: dark) {
+#PlacesToolbarItems > * {
+  background: #333333 !important; 
+}
+
+#PlacesToolbarItems > *:hover {
+  background: #555555 !important;
+}
+}
+
+@media (prefers-color-scheme: light)  {
+#PlacesToolbarItems > * {
+  background: #cccccc !important;
+}
+
+#PlacesToolbarItems > *:hover {
+  background: #eeeeee !important;
+}
+}
+
+/* Center Bookmarks*/
+.browserContainer > findbar .findbar-textbox  {
+  border-radius: 10px !important;
+  text-align: center  !important;
+}
+#PlacesToolbarItems {
+  display: flex !important;
+  justify-content: center !important;
+}
+

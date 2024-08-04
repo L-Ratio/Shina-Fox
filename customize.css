@@ -1,0 +1,28 @@
+/* GLOBAL SETTING */
+
+/* Fonts */
+
+* {
+    font-family: monospace !important;
+  }
+  
+  /* Use the following to customize the theme*/
+:root{
+
+    /* Dark Mode Colors*/
+    --main-color-darkmode: #1a1a1a;
+    --main-color-darkmode-secondary: #424242;
+
+
+    /* Light Mode Colors*/
+    --main-color-lightmode: #e6e6e6;
+    --main-color-lightmdoe-secondary: #d6d6d6;
+
+    /* Private browisng color - Not Affected by either lightmode or darkmode colors*/
+    --private-browsing-color: #25003e;
+
+
+    --uc-bm-height: 24px; 
+    --uc-bm-padding: 6px
+}
+

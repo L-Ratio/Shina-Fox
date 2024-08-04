@@ -1,0 +1,45 @@
+
+@media (prefers-color-scheme: dark) {
+    #navigator-toolbox,
+    #sidebar-box,
+    #tabbrowser-tabbox,
+    #tabbrowser-tabpanels,
+    #browser,
+    #appcontent,
+    #sidebar-select-box,
+    .browser-sidebar2,
+    tab.tabbrowser-tab *{
+      background-color: var(--main-color-darkmode) !important;
+    }
+      
+    }
+    @media (prefers-color-scheme: light)  {
+    #navigator-toolbox,
+    #sidebar-box,
+    #tabbrowser-tabbox,
+    #tabbrowser-tabpanels,
+    #browser,
+    #appcontent,
+    #sidebar-select-box,
+    .browser-sidebar2,
+    tab.tabbrowser-tab *{
+      background-color: var(--main-color-lightmode) !important;
+    }
+    }
+    
+    @media (prefers-color-scheme: dark) {
+    #navigator-toolbox  {
+      background: var(--main-color-darkmode) !important;
+    }
+    }
+    
+    @media (prefers-color-scheme: light)  {
+    #navigator-toolbox  {
+      background: var(--main-color-lightmode) !important;
+    }
+    }
+    
+    #PersonalToolbar,
+    #nav-bar  {
+      background: transparent !important;
+    }

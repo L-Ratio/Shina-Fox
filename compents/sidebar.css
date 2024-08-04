@@ -1,0 +1,72 @@
+
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
+    --sidebar-width: 60px;
+    --sidebar-hover-width: 256px;
+    position: relative;
+    min-width: var(--sidebar-width) !important;
+    width: var(--sidebar-width) !important;
+    max-width: var(--sidebar-width) !important;
+    z-index: 1;
+  }
+  
+  #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]>#sidebar {
+    transition: min-width 200ms ease-in-out !important;
+    min-width: var(--sidebar-width) !important;
+    will-change: min-width;
+    transition-delay: 0.3s !important;  /* Delay on hover off */
+  }
+  
+  #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover>#sidebar {
+    min-width: var(--sidebar-hover-width) !important;
+    transition-delay: 0.1s !important;  /* No delay on hover on */
+  }
+  
+  #sidebar-box {
+      opacity: 0.9;
+  
+  }
+  
+  /*------------------------------------------------*/
+  /* Hide Side bar header and line */
+  
+  #sidebar-header,
+  #sidebar-splitter {
+      display: none !important;
+  }
+  
+  /*------------------------------------------------*/
+  /* Sidebar Border */
+  
+  @media (prefers-color-scheme: dark) {
+  #sidebar-box #sidebar,
+  #sidebar-box #webextpanels-window {
+      border-radius: 15px !important;
+      margin: 15px 15px 15px 5px !important;
+      border: 3px solid rgba(204, 204, 204, 0.3);
+      transition: border 0.3s ease;
+      box-shadow: 0 0 10px 5px rgba(0,0,0,0.5);
+  }
+  
+  #sidebar-box #sidebar:hover,
+  #sidebar-box #webextpanels-:hover {
+      border: 3px solid rgba(204, 204, 204, 0.6);
+      box-shadow: 0 0 10px 5px rgba(0,0,0,0.5);
+  }
+  }
+  
+  @media (prefers-color-scheme: light) {
+  #sidebar-box #sidebar,
+  #sidebar-box #webextpanels-window  {
+      border-radius: 15px !important;
+      margin: 15px 15px 15px 5px !important;
+      border: 3px solid rgba(51, 51, 51, 0.1);
+      transition: border 0.3s ease;
+      box-shadow: 0 0 10px 5px rgba(255,255,255,0.5);
+  }
+  
+  #sidebar-box #sidebar:hover,
+  #sidebar-box #webextpanels-window:hover {
+      border: 3px solid rgba(51, 51, 51, 0.6);
+      box-shadow: 0 0 10px 5px rgba(255,255,255,0.5);
+  }
+  }
